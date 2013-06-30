@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>portfolio</title>
+	<link rel="stylesheet" href="/site_media/styles/base.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/site_media/scripts/jquery-lightbox-0.5/css/jquery.lightbox-0.5.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/site_media/scripts/jquery-lightbox-0.5/js/jquery.lightbox-0.5.min.js"></script>
+  </head>
+  <body>
+
+    <div class="pf-header">
+      <ul class="pf-header-menu">
+        <li><a href="{% url 'profil' %}">Profil</a></li>
+        <li><a href="{% url 'skill_index' %}">Compétences</a></li>
+        <li><a href="{% url 'career' %}">Parcours</a></li>
+        <li><a href="{% url 'school' %}">Formation</a></li>
+      </ul>
+    </div>
+
+    <div class="pf-breadcrumb">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </div>
+
+    <div class="pf-timeline">
+      {% block timeline %}
+      {% endblock %}
+    </div>
+
+    <div class="pf-body">
+      {% block body %}
+      {% endblock %}
+    </div>
+
+    <div class="pf-footer">
+    </div>
+
+    <script type="text/javascript">
+      {% block script %}
+      {% endblock %}
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+
+{% load project %}
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% breadcrumb_url '/tag/' 'Tags' %}
+{% breadcrumb tag.name %} 
+{% endblock %}
+
+{% block body %}
+	<article class="pf-tag">
+
+		{%for p in object_list%}
+			<article class="pf-project" id="pf-project-{{p.id}}" style="{% cycle 'float: left; clear: both' 'float: right' %}">
+				{% project_from_tag p tag %}
+			</article>
+		{%endfor%}
+
+	</article>
+{% endblock %}

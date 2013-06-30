@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% breadcrumb 'Tags' %} 
+{% endblock %}
+
+
+{% block body %}
+
+<ul>
+{%for tag in object_list%}
+	<li>
+	<a style="font-size: {{tag.count|add:tag.count|add:10}}px" href="{% url 'tag_detail' tag.id tag.name|slugify %}">{{tag.name}}</a>
+	<small>({{tag.count}})</small>
+	</li>
+{%endfor%}
+</ul>
+
+{% endblock %}

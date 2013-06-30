@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+
+{% load project %}
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% breadcrumb_url '/competence/' 'Compétences' %}
+{% breadcrumb skill.name %} 
+{% endblock %}
+
+{% block body %}
+<article class="pf-skill pf-skill-detail">
+
+<section class="pf-skill-desc">
+  {{skill.desc|safe}}
+</section>
+
+<h1>Projets réalisés</h1>
+{%for p in projects %}
+	<article class="pf-project" id="pf-project-{{p.id}}" style="{% cycle 'float: left; clear: both' 'float: right' %}">
+		{% project_from_skill p skill %}
+	</article>
+{%endfor%}
+
+</article>
+{% endblock %}

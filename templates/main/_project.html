@@ -1,0 +1,33 @@
+<h2><a href="{{url}}">{{project.name}}</a></h2>
+
+<nav class="pf-project-tags">
+{%for tag in project.tag.all %}
+	{% if not forloop.first %}&ndash;{% endif %}
+	<a href="{% url 'tag_detail' tag.id tag.name|slugify %}">{{tag}}</a>
+{%endfor%}
+</nav>
+
+{% if project.illustration %}
+<nav class="pf-lightbox pf-project-illustration" >
+{%if project.desc and project.file%}
+<a href="{{url}}">
+  <img src="/site_media/{{project.illustration.path}}" alt="{{project.illustration.name}}" />
+</a>
+{%else%}
+  <img src="/site_media/{{project.illustration.path}}" alt="{{project.illustration.name}}" />
+{%endif%}
+</nav>
+{% endif %}
+
+<section class="pf-project-content">
+{%if project.intro%}
+	{{project.intro|safe}}
+{% endif %}
+
+{%if project.desc and project.file%}
+<nav class="readmore">
+	<a href="{{url}}">Voir plus...</a>
+</nav>
+{%endif%}
+
+</section>

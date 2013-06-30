@@ -1,0 +1,170 @@
+{% extends "main/base.html" %}
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% breadcrumb 'Formation' %} 
+{% endblock %}
+
+{% block body %}
+<section class="pf-school">
+
+<article>
+	<h2>Epitech</h2>
+	<p>
+		J'ai commencé mes études supérieur par 2 années à l'école Epitech au Kremlin-Bicêtre.
+	</p>
+	<p>
+		Epitech était pour moi une école emblématique, sa méthode de travail par projet, son parc de machine sous FreeBSD, les technologies enseignées très "Unix" (C, C++, Bash, Perl, LISP), jusqu'à son directeur de l'époque Nicolas Sadirac qui est quelqu'un de reconnu dans le monde de l'informatique.
+	</p>
+	<p>
+		Le moins que l'on puisse dire c'est que ces années furent intenses, piscines C, PHP, C++, plus d'une vingtaine de projets, 1 an au sein du BDE, 2 seminaires d'intégrations et pas beaucoup de vacances !
+	</p>
+</article>
+
+<article>
+	<h3>Piscine C</h3>
+	<img src="/site_media/uploads/fdf2.png" alt="FDF" class="left">
+	<p>
+		La première année à Epitech commence par 2 semaines de "piscines", il s'agit de journées de TP relativement intense (9h-23h42) destinées à nous apprendre le langage C, et plus globalement la façon de penser et la logique nécéssaire à la réalisation d'un logiciel.
+	</p>
+	<p>
+		Les exercices au départ plutôt faciles (écrire des caractères à l'écran, recoder les fonctions les plus simples de la LIBC) sont vite montés en compléxité (utilisation des pointeurs, travail sur les listes chainées et les arbres binaire, recodage de fonctions comme printf ou fgets), et la limite des 23h42 ne parut finalement pas si tard que ca.
+	</p>
+	<p>
+		Personnellement j'ai adoré cette période, à l'époque passioné d'informatique depuis déjà quelques années. j'ai pu en quelques jours acquérir de solides connaissances et comprendre beaucoups de choses.
+	</p>
+</article>
+
+<article>
+	<h3>Les projets</h3>
+	<img src="/site_media/uploads/rt2.jpg" alt="Raytracer" class="left">
+	<!--img src="/site_media/uploads/corewar.jpg" alt="FDF" class="left"-->
+	<p>
+		Les projets de premier et deuxieme années sont tous tres ludiques et nous montre différents aspects de la programmation. Bistromatique et Corewar pour le parsing, Lem in, Alum1 et les différentes colles pour l'algo, ainsi que quelques projets graphiques comme le Wold3D, le Raytracer et le FDF.
+	</p>
+	<p>
+		Enfin deux projets un peu plus conséquents: le 42sh en premiere année, un shell UNIX compatible POSIX, et le projet libre en 2nd, dans mon cas le client de messagerie netsoul <a href="/competence/6/client-lourd/19/buibui/">Buibui</a>
+
+		<!--
+		drwxr-x---.  3 alex alex  4096 22 mars  19:04 42<br/>
+		drwxr-x---.  3 alex alex  4096 22 mars  19:06 alum1<br/>
+		drwxr-x---. 11 alex alex  4096 22 mars  19:06 bistro<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 bsq<br/>
+		drwxr-x---.  3 alex alex  4096 22 mars  19:06 colle0<br/>
+		drwxr-x---.  3 alex alex  4096 22 mars  19:04 colles<br/>
+		drwxr-x---.  6 alex alex  4096 22 mars  19:06 corewar<br/>
+		drwxr-x---.  5 alex alex  4096 22 mars  19:04 fdf<br/>
+		drwxr-x---.  4 alex alex  4096 22 mars  19:06 getnextline<br/>
+		drwxr-x---.  7 alex alex  4096 22 mars  19:06 gl<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:05 isbp<br/>
+		drwxr-x---.  6 alex alex  4096 22 mars  19:06 lemin<br/>
+		drwxr-x---.  5 alex alex  4096 22 mars  19:06 lemin_bak<br/>
+		drwxr-x---.  5 alex alex  4096 22 mars  19:06 lemin.bak<br/>
+		drwxr-x---.  5 alex alex  4096 22 mars  19:06 lemin_rendu<br/>
+		drwxr-x---.  4 alex alex  4096 22 mars  19:06 ls<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 minishell0<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 minishell1<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 minishell2<br/>
+		drwxr-x---.  6 alex alex  4096 22 mars  19:06 minitalk<br/>
+		drwxr-x---.  3 alex alex  4096 22 mars  19:06 mouse<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 my_ftp<br/>
+		drwxr-x---.  4 alex alex  4096 22 mars  19:06 myprintf<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 my_select<br/>
+		drwxr-x---.  4 alex alex  4096 22 mars  19:05 nutz<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 push_swap<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 relou<br/>
+		drwxr-x---.  4 alex alex  4096 22 mars  19:04 select<br/>
+		drwxr-x---.  2 alex alex  4096 22 mars  19:06 wolf<br/>
+		<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 101vector<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 102matrix<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 103move<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 104light<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 105polar<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 106curve<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 107suite<br/>
+		drwxr-x---.  2 alex alex 4096 22 mars  19:06 108deriv<br/>
+		-->
+	</p>
+</article>
+
+<article>
+	<h3>Le BDE</h3>
+	<img src="/site_media/uploads/Epigliss-aiguilles-d-arves.jpg" alt="Epigliss" class="left">
+	<p>
+		Le BDE fut une autre expérience très intéressante d'Epitech. Durant une année j'ai participé a l'organisation de différent événement, en particulier la semaine d'élection, le séminaire et le sejour aux trois vallées Epigliss.
+	</p>
+</article>
+
+<article>
+	<h3>Le départ</h3>
+	<p>
+		En fin de seconde année j'ai du quitter l'école a cause de la non validation du module d'anglais (un score minimum au TOEIC de 600 étant demandé, score que je possede aujourd'hui largement).
+	</p>
+	<!--p>
+		Je regrette le manque de flexibilité de l'administration qui ne m'a pas laissé d'autres choix que de partir malgré des notes plutôt bonnes sur les modules de programmation et de math.
+	</p-->
+</article>
+
+<article>
+	<h2>In'tech INFO</h2>
+	<p>
+		J'ai ensuite choisi d'intégrer In'tech INFO. Il s'agit d'une école formant en 5 ans des expert en systeme et reseau ou en ingénierie logicielle, c'est évidement cett derniere voie qui m'a séduite.
+	</p>
+	<p>
+		In'tech INFO propose un enseignement différents des autres grande écoles, et possede un programme tres riche a la fois techniques (C, C#, JS...) mais également avec des cours de gestion de projet, simulation d'entreprise, communication orale, etc.
+	</p>
+</article>
+
+<article>
+	<h3>Fonctionnement par projet</h3>
+	<p>
+		La premiere singularité de In'tech INFO est une pédagogie orienté projet. Chaque année un certain nombre de projet dit "industriel", sont apportés par des clients externes partenaire de l'école, chaque étudiant rejoins un groupe ayant a sa charge la réalisation d'un de ces projet.
+	</p>
+	<p>
+		Chaque projet passe alors par différents phases allant de l'analyse du besoin client a la présentation au forum des projets industriel en fin de semmestre. Ce fonctionnement permet de consolider les techniques de gestion de projet reçu en cours.
+	</p>
+</article>
+
+<article>
+	<h3>Projet de réalisation personnel</h3>
+	<p>
+	</p>
+</article>
+
+<article>
+	<h3>Deux cursus: Ingénierie logicielle / Systeme et Réseaux</h3>
+	<p>
+		In'tech INFO propose deux cursus différent, un premier en <em>ingénierie logicielle</em> qui offre principalement des cours de développement logiciel, d'algorithmique et de formation a certaines technologie ou Framework, et un second en <em>systeme et réseaux</em> familiarisant a l'administration de serveur et permettant le passage de différente certifications.
+	</p>
+	<p>
+		En debut de cycle les deux filieres disposent d'un tron commun permettant a chaque étudiant de posséder le même socle de connaissance ainsi que suffisant de bases pour être un minimum polyvalant dans ces deux dommaines.
+	</p>
+</article>
+
+<article>
+	<h3>Le stage et l'alternance</h3>
+	<p>
+		La fin de la 3eme année est occupé par un premier séjour en entreprise a l'occasion d'un stage de 6mois, se concluant par une soutance validant l'année ainsi que le rendu d'un <a href="https://www.dropbox.com/s/vvskg73a42v2ip3/Pr%C3%A9sentation.pdf">rapport de stage</a>
+	</p>
+	<p>
+		Les deux dernieres années d'études sont ensuites marquées par une alternance de quatre jours en entreprise suivit d'un jour a l'école, cette journée de cours sert a différentes formations généralement non technique (simulation d'entreprise, communication orale...).
+	</p>
+</article>
+
+<!--
+<p>J&#8217;ai rassemblé ici certains des projets C et C++ réalisés durant mes 2 premières années d&#8217;étude.</p>
+<h3>Bistromatique (2 semaines &#8211; 2 personnes)<img class="alignleft  wp-image-378" title="icon_bistromathique" src="http://alexislauper.com/wp-content/uploads/2012/03/bistromathique.gif" alt="" width="73" height="73" /></h3>
+<p>La bistromathique est mon premier projet, il m&#8217;a aidé à comprendre les bases du parsing.<br />
+Le but était de concevoir une calculatrice permettant le calcul de nombres infinis, et ce dans une base quelconque.</p>
+<h3><img class="alignleft  wp-image-398" title="icon_emacs" src="http://alexislauper.com/wp-content/uploads/2007/03/icon_emacs.png" alt="" width="74" height="74" />Réimplémentation de fonctions de la LIBC (2 semaines)</h3>
+<p>Afin de mieux comprendre leurs fonctionnements, nous avons réimplémentés plusieurs fonctions de la LIBC, comme printf(), fgets(), malloc()&#8230;</p>
+<p>&nbsp;</p>
+<h3><img class="alignleft size-full wp-image-440" title="icon_filler_baby" src="http://alexislauper.com/wp-content/uploads/2007/03/icon_filler_baby.png" alt="" width="74" height="74" />Filler, Grimly, FDF&#8230; (1 semaine &#8211; 2 personnes)</h3>
+<p>De petits projets graphique afin de nous apprendre un algorithme ou des techniques de programmation particulières.<br />
+Il s&#8217;agit par exemple du FDF un programme capable de générer des images en 3D fil de fer à partir d&#8217;un fichier de configuration, ou encore du filler sorte de tetris ayant pour but de remplir un plateau de bloques de forme aléatoire de la façon la plus efficace possible.</p>
+<h3><img class="alignleft  wp-image-381" title="icon_corewar" src="http://alexislauper.com/wp-content/uploads/2012/03/corewar_1.gif" alt="" width="73" height="73" />Corewar (1 mois &#8211; groupe de 4)</h3>
+<p>Il s&#8217;agit d&#8217;un jeu de programmation où deux programmes s&#8217;affrontent pour prendre le contrôle d&#8217;une machine virtuelle.<br />
+Cet exercice nous à appris le fonctionnement de la mémoire ainsi que le langage Redcode, proche de l&#8217;assembleur.</p>
+-->
+{% endblock %}

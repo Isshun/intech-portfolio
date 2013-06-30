@@ -1,0 +1,232 @@
+/* @font-face { */
+/* 	font-family: 'TitilliumText'; */
+/* 	src: url('/site_media/fonts/TitilliumText22L001-webfont.eot'); */
+/* 	src: local('Â¢'), url('/site_media/fonts/TitilliumText22L001-webfont.woff') format('woff'), url('/site_media/fonts/TitilliumText22L001-webfont.ttf') format('truetype'), url('/site_media/fonts/TitilliumText22L001-webfont.svg#webfontcQwkbhEA') format('svg'); */
+/* 	font-weight: normal; */
+/* 	font-style: normal; */
+/* } */
+
+@font-face {
+font-family: 'TitilliumText22LRegular';
+src: url('/site_media/fonts/titilliumtext22l003-webfont.eot');
+src: local('â˜º'), url('/site_media/fonts/titilliumtext22l003-webfont.woff') format('woff'), url('/site_media/fonts/titilliumtext22l003-webfont.ttf') format('truetype'), url('/site_media/fonts/TitilliumText22L003-webfont.svg#webfont7I9cUueZ') format('svg');
+font-style: normal;
+}
+
+body {
+    padding: 0 0 20px 0;
+    margin: 0;
+		font-family: "TitilliumText22LRegular", Arial, Helvetica, sans-serif;
+    color: #2B292D;
+}
+
+a {
+    /*color: #939393;*/
+    color: #82BD1A;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p,
+nav.readmore {
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 1.25em;
+}
+
+h3 {
+		font-weight: 1800;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.pf-school article {
+		overflow: hidden;
+		margin-bottom: 5px;
+}
+
+.pf-school p {
+		text-align: justify;
+}
+
+.pf-school img {
+		width: 220px;
+		height: 150px;
+}
+
+.pf-school img.right {
+		float: right;
+		margin: 0 0 0 10px;
+}
+
+.pf-school img.left {
+		float: left;
+		margin: 0 10px 0 0;
+}
+
+.pf-header {
+    width: 100%;
+    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    background: url('/site_media/images/bg_header.jpg');
+}
+
+.pf-header-menu {
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 740px;
+    font-size: 20px;
+}
+
+.pf-header-menu li {
+    margin: 0;
+    padding: 0 25px;
+    list-style: none;
+    float: left;
+}
+
+.pf-header-menu a {
+    color: white;
+}
+
+.pf-breadcrumb, .pf-body {
+    width: 923px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pf-breadcrumb, .pf-breadcrumb {
+    font-size: 32px;
+    font-weight: bold;
+    height: 48px;
+    line-height: 46px;
+    margin: 20px auto 0 auto;
+}
+
+.pf-skill {
+    margin-bottom: 22px;
+}
+
+.pf-skill-sub {
+    width: 441px;
+}
+
+.pf-skill h2 {
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 22px;
+	margin: 10px 0px 5px 0;
+	color: #939393;
+}
+
+.pf-skill-content {
+    overflow: hidden;
+    /*color: #939393;*/
+	text-align: justify;
+	padding-top: 2px;
+}
+
+.pf-skill-content img {
+    max-width: 128px;
+    max-height: 128px;
+    margin: 5px 10px 0 0;
+    float: left;
+}
+
+.pf-skill-tags {
+	margin-bottom: 8px;
+	font-size: 12px;
+}
+
+.pf-tag .pf-project,
+.pf-skill .pf-project {
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 441px;
+}
+
+.pf-skill-list h1 {
+		margin: 52px 0 15px 0;
+}
+
+.pf-skill-list .pf-skill-content {
+	border-top: 1px solid #ccc;
+	margin-top: 12px;
+}
+
+.pf-project h2{
+	line-height: 32px;
+	margin: 10px auto 0 auto;
+	text-align: center;
+	font-size: 22px;
+}
+
+.pf-skill-detail {
+	margin-top: 10px;
+	text-align: justify;
+}
+
+.pf-tag .pf-project-tags,
+.pf-skill-detail .pf-project-tags {
+	margin: 0 0 10px 0;
+	text-align: center;
+	font-size: 12px;
+}
+
+.pf-skill-detail .pf-project {
+	margin-bottom: 20px;
+}
+
+.pf-tag .pf-project-tags,
+.pf-skill-detail .pf-project-tags,
+.pf-project-detail .pf-project-tags {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.pf-project-illustration {
+    height: 280px;
+    margin: 15px auto;
+}
+
+.pf-project-illustration img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 100%;
+}
+
+.pf-project-detail {
+    max-width: 880px;
+	text-align: justify;
+}
+
+.pf-project-intro {
+	/*color: #aaa;*/
+}
+
+.pf-project-illustration img, .pf-project-files img {
+	border: 1px solid #82BD1A;
+}
+
+.pf-project-files img {
+    max-width: 256px;
+    max-height: 256px;
+		margin: 10px 10px 0 0;
+		border: 1px solid #82BD1A;
+}
+
+.pf-project-files img:hover {
+	border: 1px solid #82BD1A;
+}

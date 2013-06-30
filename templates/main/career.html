@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% breadcrumb 'Parcours' %} 
+{% endblock %}
+
+{% block timeline %}
+
+{% endblock %}
+
+
+{% block body %}
+
+<div id="timeline-embed"></div>
+
+<script type="text/javascript" src="/site_media/scripts/storyjs-embed.js"></script>
+
+<script type="text/javascript">
+
+            $(document).ready(function() {
+                createStoryJS({
+                    type:       'timeline',
+                    height:     '600',
+                    source:     '{% url "timeline" %}',
+                    embed_id:   'timeline',
+                    start_at_end: true,
+                    start_zoom_adjust: '0'
+                });
+            });
+
+</script>
+
+<div id="timeline"></div>
+
+{% endblock %}

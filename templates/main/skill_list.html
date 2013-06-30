@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% breadcrumb 'Compétences' %} 
+{% endblock %}
+
+{% block body %}
+
+<section class="pf-skill-list">
+
+	{%for skill in promoted%}
+	<article class="pf-skill">
+
+	  <h2>
+		<a href="{% url 'skill_detail' skill.id skill.name|slugify %}">{{skill.name}}</a>
+	  </h2>
+
+	  <nav class="pf-skill-tags">
+	  {%for tag in skill.tag.all %}
+			{% if not forloop.first %}&ndash;{% endif %}
+			<a href="{% url 'tag_detail' tag.id tag.name|slugify %}">{{tag}}</a>
+			<small>({{tag.count}})</small>
+	  {%endfor%}
+	  </nav>
+
+	  <section class="pf-skill-content">
+		<img src="/site_media/{{skill.file.path}}" alt="{{skill.file.name}}" />
+		{{skill.desc|safe}}
+	  </section>
+
+	</article>
+	{%endfor%}
+
+	<h1>Mes autres compétences</h1>
+
+	{%for skill in sub%}
+	<article class="pf-skill pf-skill-sub" style="{% cycle 'float: left; clear: both' 'float: right' %}">
+	  <h2>
+		<a href="{% url 'skill_detail' skill.id skill.name %}">{{skill.name}}</a>
+	  </h2>
+	  <section class="pf-skill-content">
+		<img src="/site_media/{{skill.file.path}}" alt="{{skill.file.name}}" />
+		{{skill.desc|safe}}
+	  </section>
+	</article>
+	{%endfor%}
+
+</section>
+
+{% endblock %}

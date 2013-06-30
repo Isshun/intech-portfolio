@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% breadcrumb_url '/competence/' 'Compétences' %}
+{% breadcrumb_url '/competence/1/' 'Android' %}
+{% breadcrumb project.name %} 
+{% endblock %}
+
+{% block body %}
+<h1>{{skill.name}}</h1>
+
+<div class="pf-skill-desc">
+  {{skill.desc|safe}}
+</div>
+
+<h1>{{project.name}}</h1>
+<div class="pf-project" id="pf-project-{{project.id}}">
+
+  {% if project.illustration %}
+  <div class="pf-project-illustration" >
+    <img src="/site_media/{{project.illustration.path}}" alt="{{project.illustration.name}}" />
+  </div>
+  {% endif %}
+
+  <div class="pf-project-content" style="{% if project.illustration %}max-width: 700px{% endif %}">
+
+	{{project.desc|safe}}
+
+    <div class="pf-project-files">
+      {%for file in project.file.all %}
+      <a href="/site_media/{{file.path}}">
+        <img src="/site_media/{{file.path}}" alt="{{file.name}}" />
+      </a>
+      {%endfor%}
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    $(function() {
+	$('#pf-project-{{project.id}} .pf-project-files a').lightBox({fixedNavigation:true,
+    imageLoading: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-ico-loading.gif',
+	imageBtnClose: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-btn-close.gif',
+	imageBtnPrev: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-btn-prev.gif',
+	imageBtnNext: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-btn-next.gif'});
+    });
+  </script>
+
+</div>
+{% endblock %}

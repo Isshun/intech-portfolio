@@ -1,0 +1,62 @@
+{% extends "main/base.html" %}
+
+{% load breadcrumbs %}
+{% block breadcrumbs %}
+{% if skill %}
+	{% breadcrumb_url '/competence/' 'Comp&eacute;tences' %}
+	{% breadcrumb_url_2 '/competence/' skill.id skill.name %}
+{% endif %}
+{% if tag %}
+	{% breadcrumb_url '/tag/' 'Tags' %}
+	{% breadcrumb_url_2 '/tag/' tag.id tag.name %}
+{% endif %}
+{% breadcrumb project.name %} 
+{% endblock %}
+
+{% block body %}
+
+<div class="pf-project pf-project-detail" id="pf-project-{{project.id}}">
+  
+	<div class="pf-project-tags">
+	{%for tag in project.tag.all %}
+		{% if not forloop.first %}&ndash;{% endif %}
+		<a href="{% url 'tag_detail' tag.id tag.name|slugify %}">{{tag}}</a>
+	{%endfor%}
+	</div>
+
+	<div class="pf-project-content">
+		<div class="pf-project-intro">
+		{{project.intro|safe}}
+		</div>
+	</div>
+
+	<div class="pf-lightbox pf-project-files">
+	  {% if project.illustration %}
+		<a href="/site_media/{{project.illustration.path}}"><img src="/site_media/{{project.illustration.path}}" alt="{{project.illustration.name}}" /></a>
+	  {% endif %}
+
+      {%for file in project.file.all %}
+      <a href="/site_media/{{file.path}}"><img src="/site_media/{{file.path}}" alt="{{file.name}}" /></a>
+      {%endfor%}
+    </div>
+
+	<div class="pf-project-content">
+		<div class="pf-project-desc">
+		{{project.desc|safe}}
+		</div>
+	</div>
+
+</div>
+{% endblock %}
+
+{% block script %}
+{{ block.super }}
+    $(function() {
+	$('#pf-project-{{project.id}} .pf-lightbox a').lightBox({fixedNavigation:true,
+    imageLoading: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-ico-loading.gif',
+	imageBtnClose: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-btn-close.gif',
+	imageBtnPrev: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-btn-prev.gif',
+	imageBtnNext: '/site_media/scripts/jquery-lightbox-0.5/images/lightbox-btn-next.gif'});
+    });
+{% endblock %}
+
